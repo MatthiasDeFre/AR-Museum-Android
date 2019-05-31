@@ -31,6 +31,9 @@ namespace Bachelorproef.Networking.FileDownload
                     var texture = DownloadHandlerTexture.GetContent(webRequest);
                     texture.LoadImage(webRequest.downloadHandler.data);
                     painting.Image= texture;
+                    // Creating a sprite is slow, to make sure the ui thread won't be slowed down we will create it here 
+                    // => impact on memory but much better framerate
+                    painting.Sprite = Sprite.Create(texture, new Rect(0.0F, 0.0F, texture.width, texture.height), new Vector2(0.5F, 0.5F), 100F);
                     Debug.Log("HASH-3 " + painting.GetHashCode());
                     databaseQueue.Enqueue(painting);
                     controller.PopQueue();

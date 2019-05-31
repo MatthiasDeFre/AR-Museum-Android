@@ -899,6 +899,15 @@
  <Reference Include="Newtonsoft.Json">
  <HintPath>D:/Documents/Unity/Bachelorproef/Assets/Newtonsoft.Json.dll</HintPath>
  </Reference>
+ <Reference Include="DOTween">
+ <HintPath>D:/Documents/Unity/Bachelorproef/Assets/Packages/Demigiant/DOTween/DOTween.dll</HintPath>
+ </Reference>
+ <Reference Include="DDebug">
+ <HintPath>D:/Documents/Unity/Bachelorproef/Assets/Packages/Doozy/Engine/Debug/DDebug.dll</HintPath>
+ </Reference>
+ <Reference Include="Google.Protobuf">
+ <HintPath>D:/Documents/Unity/Bachelorproef/Assets/Packages/GoogleARCore/SDK/Plugins/Google.Protobuf.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.Analytics.Editor">
  <HintPath>D:/Documents/Unity/Bachelorproef/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll</HintPath>
  </Reference>
@@ -907,15 +916,6 @@
  </Reference>
  <Reference Include="Unity.Analytics.Tracker">
  <HintPath>D:/Documents/Unity/Bachelorproef/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
- </Reference>
- <Reference Include="Google.Protobuf">
- <HintPath>D:/Documents/Unity/Bachelorproef/Assets/Packages/GoogleARCore/SDK/Plugins/Google.Protobuf.dll</HintPath>
- </Reference>
- <Reference Include="DDebug">
- <HintPath>D:/Documents/Unity/Bachelorproef/Assets/Packages/Doozy/Engine/Debug/DDebug.dll</HintPath>
- </Reference>
- <Reference Include="DOTween">
- <HintPath>D:/Documents/Unity/Bachelorproef/Assets/Packages/Demigiant/DOTween/DOTween.dll</HintPath>
  </Reference>
  <Reference Include="mscorlib">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.1.3f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>

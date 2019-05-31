@@ -10,6 +10,7 @@ public class Painting
     public List<Riddle> RiddlesToAttachToImage { get; set; }
     public string Url { get; set; }
     public Texture2D Image { get; set; }
+    public Sprite Sprite { get; set; }
     public int SortOrder { get; set; }
     public List<string> Info { get; set; }
     public int HeightPx { get; set; }

@@ -7,12 +7,12 @@ using UnityEngine.UI;
 
 public class PaintingListScroller : MonoBehaviour, IEnhancedScrollerDelegate
 {
-    private List<Painting> paintings;
+    private List<Painting> paintings = new List<Painting>();
 
     public List<Painting> Paintings
     {
         get { return paintings; }
-        set { paintings = value; }
+        set { paintings = value; Reload(); }
     }
 
     /// <summary>
@@ -82,10 +82,11 @@ public class PaintingListScroller : MonoBehaviour, IEnhancedScrollerDelegate
         _data = new SmallList<PaintingCellData>();
 
         // add inventory items to the list
-        _data.Add(new PaintingCellData() { Name = "Sword" });
-        _data.Add(new PaintingCellData() { Name = "Sword" });
-        _data.Add(new PaintingCellData() { Name = "Sword" });
-
+        paintings.ForEach(p =>
+        {
+            _data.Add(new PaintingCellData() { Name= p.Name, Info = string.Join(",", p.Info), Image=p.Sprite});
+        });
+    
         // tell the scrollers to reload
         vScroller.ReloadData();
     }

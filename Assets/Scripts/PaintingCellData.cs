@@ -7,7 +7,7 @@ public class PaintingCellData
 {
     public string Info;
     public string Name;
-    public Texture2D tex;
+    public Sprite Image;
 
         /// <summary>
         /// The delegate to call if the data's selection state

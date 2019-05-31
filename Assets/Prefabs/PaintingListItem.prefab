@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5071363631402811720}
   - component: {fileID: 8774578320418003270}
   m_Layer: 0
-  m_Name: Text (TMP) (1)
+  m_Name: Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35,7 +35,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
   m_AnchoredPosition: {x: 282, y: 100.2}
-  m_SizeDelta: {x: 450, y: 50}
+  m_SizeDelta: {x: 625, y: 50}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &5071363631402811720
 CanvasRenderer:
@@ -170,7 +170,7 @@ GameObject:
   - component: {fileID: 5392346074233425955}
   - component: {fileID: 6513476398396597599}
   m_Layer: 0
-  m_Name: Image
+  m_Name: PaintingMask
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -258,7 +258,7 @@ GameObject:
   - component: {fileID: 6821352815757081702}
   - component: {fileID: 5888606999252700096}
   m_Layer: 0
-  m_Name: Text (TMP)
+  m_Name: Description
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -281,7 +281,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
   m_AnchoredPosition: {x: 282, y: 50}
-  m_SizeDelta: {x: 450, y: 150}
+  m_SizeDelta: {x: 625, y: 150}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &6821352815757081702
 CanvasRenderer:
@@ -381,10 +381,10 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: -0.20214844}
   m_textInfo:
     textComponent: {fileID: 5888606999252700096}
-    characterCount: 77
+    characterCount: 105
     spriteCount: 0
-    spaceCount: 12
-    wordCount: 13
+    spaceCount: 13
+    wordCount: 14
     linkCount: 0
     lineCount: 3
     pageCount: 1
@@ -416,7 +416,7 @@ GameObject:
   - component: {fileID: 6756349461672871011}
   - component: {fileID: 4607531287112078536}
   m_Layer: 0
-  m_Name: Image (1)
+  m_Name: Painting
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

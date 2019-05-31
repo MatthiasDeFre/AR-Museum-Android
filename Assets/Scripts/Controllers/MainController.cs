@@ -24,7 +24,7 @@ namespace Bachelorproef
         public ARCoreSession arcoreSession;
         public AugmentedImageExampleController AugmentedController;
         private AugmentedImageDatabase augmentedImageDatabase;
-        public PaintingList PaintingList;
+        public PaintingListScroller PaintingListScroller;
         public Progressor Progressor;
         private Story story;
         // Start is called before the first frame update
@@ -80,7 +80,6 @@ namespace Bachelorproef
         }
         public void PopQueue()
         {
-            return;
            lock(databaseQueue)
             {
                 Painting painting = null;
@@ -88,7 +87,7 @@ namespace Bachelorproef
                 {
                     Progressor.SetProgress(Progressor.Progress + 0.4F / story.Paintings.Count);
                     Debug.Log(Progressor.Progress);
-                    if (story.Paintings.All(p => p.Image != null)) PaintingList.Paintings = story.Paintings;
+                    if (story.Paintings.All(p => p.Image != null)) PaintingListScroller.Paintings = story.Paintings;
                     Thread t2 = new Thread(delegate ()
                     {
                         var test2 = augmentedImageDatabase.AddImage(painting.SortOrder.ToString(), painting.Image);

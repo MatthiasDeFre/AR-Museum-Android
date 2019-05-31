@@ -82,6 +82,8 @@ public class PaintingCellView : EnhancedScrollerCellView
         // update the cell view's UI
         Name.text = data.Name;
         Info.text = data.Info;
+
+        Image.sprite = data.Image;
         // the description is only shown on the vertical cell view
 
         // set up the sprite based on the sprite path and whether the

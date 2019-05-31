@@ -1,12 +1,17 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp-Editor.dll:
+    - Doozy.Editor.EditorColors
     - Doozy.Editor.Internal.ProcessorsSettings
+    - Doozy.Editor.Nody.Settings.NodyWindowSettings
+    - Doozy.Editor.Nody.Windows.NodyWindow
+    - Doozy.Editor.Settings.DoozyWindowSettings
     Assembly-CSharp.dll:
     - Bachelorproef.MainController
     - Doozy.Engine.Nody.GraphController
     - Doozy.Engine.Nody.Models.Graph
     - Doozy.Engine.Nody.Nodes.StartNode
+    - Doozy.Engine.Nody.Nodes.SwitchBackNode
     - Doozy.Engine.Nody.NodySettings
     - Doozy.Engine.Progress.ProgressTargetAnimator
     - Doozy.Engine.Progress.ProgressTargetImage
@@ -22,7 +27,10 @@ ScriptsOnlyBuild:
     - Doozy.Engine.UI.Animation.UIAnimations
     - Doozy.Engine.UI.Base.ListOfNames
     - Doozy.Engine.UI.Base.NamesDatabase
+    - Doozy.Engine.UI.Nodes.BackButtonNode
+    - Doozy.Engine.UI.Nodes.GameEventNode
     - Doozy.Engine.UI.Nodes.PortalNode
+    - Doozy.Engine.UI.Nodes.SoundNode
     - Doozy.Engine.UI.Nodes.UINode
     - Doozy.Engine.UI.Settings.UIButtonSettings
     - Doozy.Engine.UI.Settings.UICanvasSettings
@@ -35,6 +43,7 @@ ScriptsOnlyBuild:
     - Doozy.Engine.UI.UIPopup
     - Doozy.Engine.UI.UIPopupDatabase
     - Doozy.Engine.UI.UIPopupLink
+    - Doozy.Engine.UI.UIToggle
     - Doozy.Engine.UI.UIView
     - Doozy.Engine.Utils.UILanguagePack
     - EnhancedUI.EnhancedScroller.EnhancedScroller
@@ -48,15 +57,12 @@ ScriptsOnlyBuild:
     - MessageController
     - MessageLockedGameObject
     - MessageScannedGameObject
-    - Michsky.UI.Zone.LayoutGroupPositionFix
-    - Michsky.UI.Zone.ScrollForMore
     - Michsky.UI.Zone.UIElementSound
     - PSMeshRendererUpdater
     - PaintingCellView
     - PaintingGameObject
     - PaintingInfo
-    - PaintingList
-    - PaintingListImage
+    - PaintingListScroller
     - PlaneFinderController
     - ScrollTest
     DOTween.dll:
@@ -70,10 +76,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -84,16 +88,14 @@ ScriptsOnlyBuild:
     - UnityEngine.EventSystems.StandaloneInputModule
     - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
-    - UnityEngine.UI.ContentSizeFitter
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.HorizontalLayoutGroup
     - UnityEngine.UI.Image
-    - UnityEngine.UI.LayoutElement
     - UnityEngine.UI.Mask
     - UnityEngine.UI.ScrollRect
     - UnityEngine.UI.Scrollbar
     - UnityEngine.UI.Text
-    - UnityEngine.UI.VerticalLayoutGroup
+    - UnityEngine.UI.Toggle
     com.unity.multiplayer-hlapi.Runtime.dll:
     - UnityEngine.Networking.NetworkCallbacks
     - UnityEngine.Networking.NetworkIdentity
@@ -146,8 +148,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9444}
     - Class: 114
-      Script: {instanceID: 9528}
-    - Class: 114
       Script: {instanceID: 9554}
     - Class: 114
       Script: {instanceID: 9574}
@@ -170,8 +170,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9758}
     - Class: 114
-      Script: {instanceID: 9760}
-    - Class: 114
       Script: {instanceID: 9764}
     - Class: 114
       Script: {instanceID: 9770}
@@ -180,17 +178,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9778}
     - Class: 114
-      Script: {instanceID: 9782}
-    - Class: 114
       Script: {instanceID: 9786}
     - Class: 114
-      Script: {instanceID: 9804}
+      Script: {instanceID: 9806}
     - Class: 114
       Script: {instanceID: 9814}
     - Class: 114
       Script: {instanceID: 9816}
     - Class: 114
-      Script: {instanceID: 9826}
+      Script: {instanceID: 9818}
     - Class: 114
       Script: {instanceID: 9896}
     - Class: 114
@@ -214,6 +210,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10364}
     - Class: 114
+      Script: {instanceID: 10392}
+    - Class: 114
       Script: {instanceID: 10402}
     - Class: 114
       Script: {instanceID: 10516}
@@ -227,8 +225,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 10858}
     - Class: 114
       Script: {instanceID: 11042}
-    - Class: 114
-      Script: {instanceID: 11068}
     - Class: 114
       Script: {instanceID: 11074}
     - Class: 114
@@ -278,45 +274,43 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11760}
     - Class: 114
-      Script: {instanceID: 11830}
+      Script: {instanceID: 11822}
     - Class: 114
-      Script: {instanceID: 11838}
+      Script: {instanceID: 11832}
     - Class: 114
-      Script: {instanceID: 11854}
+      Script: {instanceID: 11840}
     - Class: 114
-      Script: {instanceID: 11888}
+      Script: {instanceID: 11856}
     - Class: 114
-      Script: {instanceID: 12050}
+      Script: {instanceID: 11890}
     - Class: 114
-      Script: {instanceID: 12064}
+      Script: {instanceID: 12052}
     - Class: 114
-      Script: {instanceID: 12088}
+      Script: {instanceID: 12066}
     - Class: 114
-      Script: {instanceID: 12094}
+      Script: {instanceID: 12090}
     - Class: 114
-      Script: {instanceID: 12162}
+      Script: {instanceID: 12096}
     - Class: 114
-      Script: {instanceID: 12244}
+      Script: {instanceID: 12164}
     - Class: 114
-      Script: {instanceID: 12254}
+      Script: {instanceID: 12246}
     - Class: 114
-      Script: {instanceID: 12312}
+      Script: {instanceID: 12256}
     - Class: 114
-      Script: {instanceID: 12334}
+      Script: {instanceID: 12314}
     - Class: 114
-      Script: {instanceID: 12364}
+      Script: {instanceID: 12336}
     - Class: 114
-      Script: {instanceID: 12512}
+      Script: {instanceID: 12366}
     - Class: 114
-      Script: {instanceID: 12540}
+      Script: {instanceID: 12514}
     - Class: 114
-      Script: {instanceID: 12542}
+      Script: {instanceID: 12544}
     - Class: 114
-      Script: {instanceID: 12650}
+      Script: {instanceID: 12746}
     - Class: 114
-      Script: {instanceID: 12744}
-    - Class: 114
-      Script: {instanceID: 12758}
+      Script: {instanceID: 12760}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1986,6 +1980,12 @@ ScriptsOnlyBuild:
     className: ExampleShowPopup
   - hash:
       serializedVersion: 2
+      Hash: 06d872ebb638deba2a0b88a8e276ce8e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PaintingListScroller
+  - hash:
+      serializedVersion: 2
       Hash: 8e35b263f35ca791fa350375b06fe5ad
     assemblyName: Assembly-CSharp.dll
     namespaceName: EnhancedScrollerDemos.CellEvents
@@ -2160,7 +2160,7 @@ ScriptsOnlyBuild:
     className: ME_ParticleTrails
   - hash:
       serializedVersion: 2
-      Hash: fc652c0048877c48db4af4b57f5caac9
+      Hash: 082ad9cdbed7befa8379107e1f5f208f
     assemblyName: Assembly-CSharp.dll
     namespaceName: Bachelorproef
     className: MainController
