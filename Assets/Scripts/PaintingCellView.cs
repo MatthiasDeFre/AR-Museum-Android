@@ -107,7 +107,7 @@ public class PaintingCellView : EnhancedScrollerCellView
     /// <param name="selected">The selection state of the cell</param>
     private void SelectedChanged(bool selected)
     {
-        selectionPanel.color = (selected ? selectedColor : unSelectedColor);
+       // selectionPanel.color = (selected ? selectedColor : unSelectedColor);
     }
 
     /// <summary>

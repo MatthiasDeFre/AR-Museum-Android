@@ -3373,6 +3373,56 @@ PrefabInstance:
       propertyPath: m_HorizontalScrollbar
       value: 
       objectReference: {fileID: 579003394}
+    - target: {fileID: 5408551652320031489, guid: 6b6eb0d1213219e41bb29ac8828034a1,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5408551652320031489, guid: 6b6eb0d1213219e41bb29ac8828034a1,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5408551652320031489, guid: 6b6eb0d1213219e41bb29ac8828034a1,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5408551652320031489, guid: 6b6eb0d1213219e41bb29ac8828034a1,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5408551652320031489, guid: 6b6eb0d1213219e41bb29ac8828034a1,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5408162271504012273, guid: 6b6eb0d1213219e41bb29ac8828034a1,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5408162271504012273, guid: 6b6eb0d1213219e41bb29ac8828034a1,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5408162271504012273, guid: 6b6eb0d1213219e41bb29ac8828034a1,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5408162271504012273, guid: 6b6eb0d1213219e41bb29ac8828034a1,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5408162271504012273, guid: 6b6eb0d1213219e41bb29ac8828034a1,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b6eb0d1213219e41bb29ac8828034a1, type: 3}
 --- !u!1001 &6892555784665272448
@@ -3386,6 +3436,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Horizontal Scrollbar
+      objectReference: {fileID: 0}
+    - target: {fileID: 6892555783914035435, guid: 3338786510cbef947b2e6ed1f52ec169,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6892555783914035435, guid: 3338786510cbef947b2e6ed1f52ec169,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6892555785160324225, guid: 3338786510cbef947b2e6ed1f52ec169,
         type: 3}
@@ -3491,16 +3551,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6892555783914035435, guid: 3338786510cbef947b2e6ed1f52ec169,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6892555783914035435, guid: 3338786510cbef947b2e6ed1f52ec169,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3338786510cbef947b2e6ed1f52ec169, type: 3}

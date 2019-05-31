@@ -80,7 +80,7 @@ namespace Bachelorproef
         }
         public void PopQueue()
         {
-
+            return;
            lock(databaseQueue)
             {
                 Painting painting = null;

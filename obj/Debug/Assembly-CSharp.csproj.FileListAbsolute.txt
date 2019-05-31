@@ -233,3 +233,6 @@ D:\Documents\Unity\Bachelorproef\obj\Debug\Assembly-CSharp.csproj.CoreCompileInp
 D:\Documents\Unity\Bachelorproef\obj\Debug\Assembly-CSharp.csproj.CopyComplete
 D:\Documents\Unity\Bachelorproef\obj\Debug\Assembly-CSharp.dll
 D:\Documents\Unity\Bachelorproef\obj\Debug\Assembly-CSharp.pdb
+D:\Documents\Unity\Bachelorproef\Temp\bin\Debug\DDebug.dll
+D:\Documents\Unity\Bachelorproef\Temp\bin\Debug\DOTween.dll
+D:\Documents\Unity\Bachelorproef\Temp\bin\Debug\DOTween.xml
