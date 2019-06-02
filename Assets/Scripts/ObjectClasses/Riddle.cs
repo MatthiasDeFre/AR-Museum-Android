@@ -7,7 +7,7 @@ public abstract class Riddle
 {
     [JsonProperty(PropertyName = "$id")]
     public string Id { get; }
-    public string Hint { get; }
+    public string Hint { get; set; }
     public bool ShowOverlay { get; }
     public abstract bool Completed { get; }
     public List<Painting> Paintings { get; set; }

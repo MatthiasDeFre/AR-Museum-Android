@@ -61,6 +61,7 @@ public static class StoryDownloader
                 { 
                     p.RiddlesBeforeUnlock.ForEach(r =>
                     {
+                        Debug.Log("HINT " + r.Hint);
                         r.Paintings.Add(p);
                     });
                     p.RiddlesToAttachToImage.ForEach(r =>

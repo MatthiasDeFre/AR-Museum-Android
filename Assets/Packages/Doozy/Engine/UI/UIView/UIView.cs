@@ -598,7 +598,7 @@ namespace Doozy.Engine.UI
         {
 //            yield return null; //skip a frame
             DisableUIInteractions();
-
+            NavigationController.AddWindow(this);
             UIAnimator.StopAnimations(RectTransform, ShowBehavior.Animation.AnimationType); //stop any SHOW animations
 
             if (LoopBehavior.Animation.Enabled) UIAnimator.StopAnimations(RectTransform, LoopBehavior.Animation.AnimationType);
@@ -739,6 +739,7 @@ namespace Doozy.Engine.UI
             EnableUIInteractions();
 
             RemoveHiddenFromVisibleViews();
+            NavigationController.RemoveWindow(this);
         }
 
         private IEnumerator HideWithDelayEnumerator(float delay)

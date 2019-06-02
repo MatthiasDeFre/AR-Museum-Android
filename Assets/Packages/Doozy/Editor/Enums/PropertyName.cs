@@ -297,6 +297,9 @@ namespace Doozy.Editor
         m_wholeNumbers,
         m_width,
         m_x,
-        m_y
+        m_y,
+        // MINE
+        m_title,
+        m_image,
     }
 }

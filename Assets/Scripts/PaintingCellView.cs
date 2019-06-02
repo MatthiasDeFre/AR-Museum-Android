@@ -5,7 +5,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public delegate void SelectedDelegate(EnhancedScrollerCellView cellView);
+public delegate void SelectedDelegate(Painting painting);
 
 /// <summary>
 /// This class handles the presentation of the inventory cell view. Both the 
@@ -80,10 +80,9 @@ public class PaintingCellView : EnhancedScrollerCellView
         _data = data;
 
         // update the cell view's UI
-        Name.text = data.Name;
-        Info.text = data.Info;
-
-        Image.sprite = data.Image;
+        Name.text = data.Painting.Name;
+        Info.text = string.Join(",", data.Painting.Info);
+        Image.sprite = data.Painting.Sprite;
         // the description is only shown on the vertical cell view
 
         // set up the sprite based on the sprite path and whether the
@@ -120,6 +119,6 @@ public class PaintingCellView : EnhancedScrollerCellView
         // if a handler exists for this cell, then
         // call it.
         Debug.Log("SELECTED");
-        if (selected != null) selected(this);
+        selected?.Invoke(_data.Painting);
     }
 }

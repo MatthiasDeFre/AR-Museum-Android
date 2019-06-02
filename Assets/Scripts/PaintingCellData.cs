@@ -5,9 +5,7 @@ public delegate void SelectedChangedDelegate(bool val);
 
 public class PaintingCellData 
 {
-    public string Info;
-    public string Name;
-    public Sprite Image;
+    public Painting Painting { get; set; }
 
         /// <summary>
         /// The delegate to call if the data's selection state

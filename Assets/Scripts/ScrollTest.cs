@@ -92,9 +92,7 @@ public class ScrollTest : MonoBehaviour, IEnhancedScrollerDelegate
         _data = new SmallList<PaintingCellData>();
 
         // add inventory items to the list
-        _data.Add(new PaintingCellData() { Name = "Sword"});
-        _data.Add(new PaintingCellData() { Name = "Sword"});
-        _data.Add(new PaintingCellData() { Name = "Sword" });
+       
 
         // tell the scrollers to reload
         hScroller.ReloadData();
@@ -193,11 +191,11 @@ public class ScrollTest : MonoBehaviour, IEnhancedScrollerDelegate
 
         // set the name of the cell. This just makes it easier to see in our
         // hierarchy what the cell is
-        cellView.name = ("Horizontal") + " " + _data[dataIndex].Name;
+        cellView.name = ("Horizontal") + " " + _data[dataIndex].Painting.Name;
 
         // set the selected callback to the CellViewSelected function of this controller. 
         // this will be fired when the cell's button is clicked
-        cellView.selected = CellViewSelected;
+   //     cellView.selected = CellViewSelected;
 
         // set the data for the cell
         cellView.SetData(dataIndex, _data[dataIndex], (false));

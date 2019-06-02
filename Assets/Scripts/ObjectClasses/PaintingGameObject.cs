@@ -41,6 +41,10 @@ public class PaintingGameObject : MonoBehaviour
     /// </summary>
     public void Update()
     {
+        // Dont do anything if the ui has a open window and is not scanned
+        // Position updates can happen if the painting is already scanned but not before that
+        if (!Painting.Scanned && NavigationController.HasOpenWindow) return;
+
         if (!Painting.Unlocked || AugmentedImage == null || AugmentedImage.TrackingState != TrackingState.Tracking)
         {
           //  Cube.SetActive(false);

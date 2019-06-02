@@ -41,6 +41,9 @@ public class PaintingListScroller : MonoBehaviour, IEnhancedScrollerDelegate
     /// item sprites are located
     /// </summary>
     public string resourcePath;
+
+    public PaintingDetailView PaintingDetailView;
+
     public void SetActiveGameObject(string name)
     {
         Debug.Log("HEY");
@@ -84,7 +87,7 @@ public class PaintingListScroller : MonoBehaviour, IEnhancedScrollerDelegate
         // add inventory items to the list
         paintings.ForEach(p =>
         {
-            _data.Add(new PaintingCellData() { Name= p.Name, Info = string.Join(",", p.Info), Image=p.Sprite});
+            _data.Add(new PaintingCellData() { Painting=p});
         });
     
         // tell the scrollers to reload
@@ -95,27 +98,12 @@ public class PaintingListScroller : MonoBehaviour, IEnhancedScrollerDelegate
     /// This function handles the cell view's button click event
     /// </summary>
     /// <param name="cellView">The cell view that had the button clicked</param>
-    private void CellViewSelected(EnhancedScrollerCellView cellView)
+    private void CellViewSelected(Painting painting)
     {
-        if (cellView == null)
+        if (painting != null)
         {
-            // nothing was selected
-
-        }
-        else
-        {
-            // get the selected data index of the cell view
-            var selectedDataIndex = (cellView as PaintingCellView).DataIndex;
-
-            // loop through each item in the data list and turn
-            // on or off the selection state. This is done so that
-            // any previous selection states are removed and new
-            // ones are added.
-            for (var i = 0; i < _data.Count; i++)
-            {
-                _data[i].Selected = (selectedDataIndex == i);
-            }
-
+            PaintingDetailView.Painting = painting;
+            PaintingDetailView.Show();
         }
     }
 
@@ -184,7 +172,7 @@ public class PaintingListScroller : MonoBehaviour, IEnhancedScrollerDelegate
 
         // set the name of the cell. This just makes it easier to see in our
         // hierarchy what the cell is
-        cellView.name = ("Horizontal") + " " + _data[dataIndex].Name;
+        cellView.name = ("Horizontal") + " " + _data[dataIndex].Painting.Name;
 
         // set the selected callback to the CellViewSelected function of this controller. 
         // this will be fired when the cell's button is clicked

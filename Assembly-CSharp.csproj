@@ -574,6 +574,13 @@
      <Compile Include="Assets\Scripts\Controllers\MessageType.cs" />
      <Compile Include="Assets\Scripts\Controllers\PlaneFinderController.cs" />
      <Compile Include="Assets\Scripts\ImageTarget.cs" />
+     <Compile Include="Assets\Scripts\Interface\InfoListCellView.cs" />
+     <Compile Include="Assets\Scripts\Interface\InfoListData.cs" />
+     <Compile Include="Assets\Scripts\Interface\InfoListFooter.cs" />
+     <Compile Include="Assets\Scripts\Interface\InfoListHeader.cs" />
+     <Compile Include="Assets\Scripts\Interface\InfoListRow.cs" />
+     <Compile Include="Assets\Scripts\Interface\PaintingDetailView.cs" />
+     <Compile Include="Assets\Scripts\Interface\UIViewWithController.cs" />
      <Compile Include="Assets\Scripts\Networking\FileDownload\FileDownloader.cs" />
      <Compile Include="Assets\Scripts\Networking\FileDownload\FileDownloadJob.cs" />
      <Compile Include="Assets\Scripts\Networking\StoryDownloader.cs" />
@@ -581,6 +588,7 @@
      <Compile Include="Assets\Scripts\ObjectClasses\KnownTypesBinder.cs" />
      <Compile Include="Assets\Scripts\ObjectClasses\MessageLockedGameObject.cs" />
      <Compile Include="Assets\Scripts\ObjectClasses\MessageScannedGameObject.cs" />
+     <Compile Include="Assets\Scripts\ObjectClasses\NavigationController.cs" />
      <Compile Include="Assets\Scripts\ObjectClasses\Painting.cs" />
      <Compile Include="Assets\Scripts\ObjectClasses\PaintingGameObject.cs" />
      <Compile Include="Assets\Scripts\ObjectClasses\PaintingInfo.cs" />

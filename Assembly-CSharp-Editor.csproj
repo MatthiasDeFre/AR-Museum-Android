@@ -315,6 +315,7 @@
      <Compile Include="Assets\Packages\KriptoFX\MeshEffect\Shaders\Editor\ME_CustomShaderGUI.cs" />
      <Compile Include="Assets\Packages\KriptoFX\MeshEffect\Shaders\Editor\ME_UberParticleGUI.cs" />
      <Compile Include="Assets\Packages\Zone UI\Editor\InitZoneUI.cs" />
+     <Compile Include="Assets\Scripts\Editor\PaintingDetailEditor.cs" />
      <None Include="Assets\Packages\Doozy\Editor\Nody\Shaders\LineDraw.shader" />
      <None Include="Assets\Packages\GoogleARCore\Editor\ARCoreiOSDependencies.template" />
      <None Include="Assets\Packages\PlayServicesResolver\Editor\play-services-resolver_v1.2.100.0.txt" />
