@@ -59,7 +59,6 @@ public class RiddleFindGameObject : RiddleGameObject<RiddleFind>
                         riddleFindPaintingWithLoc.Found = true;
                         CheckIfComplete();
                         Debug.Log("RIP RIDDLECUBE :(");
-                        UIView.ShowView("PaintingList");
                         Destroy(RiddleCube);
                         Destroy(this);
                         return;

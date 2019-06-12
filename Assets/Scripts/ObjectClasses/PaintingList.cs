@@ -9,12 +9,14 @@ public class PaintingList : MonoBehaviour
     public PaintingListImage PaintingListImagePrefab;
     public List<Painting> Paintings { set { paintings = value; InitImageList(); } }
     public VerticalLayoutGroup List;
+    private List<GameObject> objects = new List<GameObject>();
     private List<Painting> paintings;
-    void InitImageList()
+    public void InitImageList()
     {
         paintings.ForEach(p => {
             var listImage = Instantiate(PaintingListImagePrefab, List.transform);
             listImage.Painting = p;
+            objects.Add(listImage.gameObject);
         });
     }
 }

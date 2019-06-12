@@ -18,6 +18,8 @@ public abstract class RiddleGameObject<T> : MonoBehaviour, IRiddleGameObject whe
                 // No longer needed :(
                 // No need for paintingGameObject.ShowInfo => if in update will solve it
                 Riddle.Paintings.ForEach(p => p.CheckIfUnlocked());
+                StatController.IncrementStat(StatType.Riddles, 1);
+                StatController.IncrementStat(StatType.Experience, 50);
             }
         }
         

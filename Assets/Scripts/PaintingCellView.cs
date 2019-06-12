@@ -1,11 +1,10 @@
 ﻿using EnhancedUI.EnhancedScroller;
 using System.Collections;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-
-public delegate void SelectedDelegate(Painting painting);
 
 /// <summary>
 /// This class handles the presentation of the inventory cell view. Both the 
@@ -42,7 +41,7 @@ public class PaintingCellView : EnhancedScrollerCellView
     /// <summary>
     /// The handler to call when this cell's button traps a click event
     /// </summary>
-    public SelectedDelegate selected;
+    public SelectedPainting selected;
 
     /// <summary>
     /// This is called if the cell is destroyed. The EnhancedScroller will
@@ -80,9 +79,21 @@ public class PaintingCellView : EnhancedScrollerCellView
         _data = data;
 
         // update the cell view's UI
-        Name.text = data.Painting.Name;
-        Info.text = string.Join(",", data.Painting.Info);
-        Image.sprite = data.Painting.Sprite;
+        if (data.Painting.Unlocked) {
+            Image.sprite = data.Painting.Sprite;
+        }
+        if (data.Painting.Scanned)
+        {
+            Name.text = data.Painting.Name;
+            Info.text = string.Join(",", data.Painting.Info);
+        } else
+        {
+            Regex pattern = new Regex("[a-zA-Z0-9]");
+            Name.text = pattern.Replace(data.Painting.Name, "?");
+            Info.text = pattern.Replace(string.Join(",", data.Painting.Info), "?");
+        }
+        
+       
         // the description is only shown on the vertical cell view
 
         // set up the sprite based on the sprite path and whether the

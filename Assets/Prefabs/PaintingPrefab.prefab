@@ -43,5 +43,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a6df1ef830abff48951ec5e100f6c0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PaintingInfo: {fileID: 1324152224077674154, guid: fed080dc59b67004fa82c470d8ca3dd2,
+  PaintingInfo: {fileID: 1740708426145375382, guid: ff65ca3190b013847b8f78bdde8268a1,
     type: 3}

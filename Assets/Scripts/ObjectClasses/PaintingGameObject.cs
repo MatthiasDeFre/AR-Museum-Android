@@ -66,8 +66,10 @@ public class PaintingGameObject : MonoBehaviour
         {
             MessageController.ShowMessage(MessageType.Scanned, new string[] { Painting.Date, Painting.Name });
             Painting.Scanned = true;
+            StatController.IncrementStat(StatType.Scanned, 1);
+            StatController.IncrementStat(StatType.Experience, 15);
         }
-      
+
         float halfWidth = AugmentedImage.ExtentX / 2;
         float halfHeight = AugmentedImage.ExtentZ / 2;
         int x = 1000;
@@ -86,7 +88,7 @@ public class PaintingGameObject : MonoBehaviour
         float newSize = distance / 50;
         infoObjects.ForEach(info =>
         {
-            info.transform.localPosition = ((halfWidth * 1.5F + 0.2F) * Vector3.left) + (AugmentedImage.ExtentZ * Vector3.back);
+            info.transform.localPosition = ((halfWidth * 2.5F + 0.2F) * Vector3.left) + (AugmentedImage.ExtentZ * Vector3.back);
             info.transform.localRotation = transform.localRotation;
             // TODO I'll think about it
             //info.transform.LookAt(Camera.main.transform);

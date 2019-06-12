@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class PaintingListScroller : MonoBehaviour, IEnhancedScrollerDelegate
 {
     private List<Painting> paintings = new List<Painting>();
-
+    public GameObject Container;
     public List<Painting> Paintings
     {
         get { return paintings; }
@@ -75,7 +75,7 @@ public class PaintingListScroller : MonoBehaviour, IEnhancedScrollerDelegate
     /// <summary>
     /// This function sets up our inventory data and tells the scrollers to reload
     /// </summary>
-    private void Reload()
+    public void Reload()
     {
         // if the data existed previously, loop through
         // and remove the selection change handlers before

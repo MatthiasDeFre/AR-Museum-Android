@@ -184,8 +184,7 @@ namespace Doozy.Engine.SceneManagement
 
         private void Update()
         {
-//            if (!m_loadInProgress) return;
-            Debug.Log("CurrentAsyncOperation == null? " + (CurrentAsyncOperation == null));
+//            if (!m_loadInProgress) return
             if (CurrentAsyncOperation == null) return;
             Progress = Mathf.Clamp01(CurrentAsyncOperation.progress / 0.9f); //update load progress [0, 0.9] > [0, 1]
             if (DebugComponent && !m_activatingScene) DDebug.Log("[" + name + "] Load progress: " + Mathf.Round(Progress * 100) + "%", this);
