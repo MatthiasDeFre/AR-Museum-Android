@@ -4,23 +4,23 @@ This application was made for my bachelor thesis. The point of the application i
 
 ## Main Menu
 
-![Main menu](img\prototypeUi.png)
+![Main menu](https://github.com/MatthiasDeFre/AR-Museum-Android/blob/master/img/prototypeUi.png)
 
 ## Scanning a painting reveals extra info about it
 
-![Painting Info](img\paintingInfo.jpg)
+![Painting Info](https://github.com/MatthiasDeFre/AR-Museum-Android/blob/master/img/paintingInfo.jpg)
 
 ## The visitor needs to scan the paintings in order
 
-![Painting Locked](img\paintingLocked.jpg)
+![Painting Locked](https://github.com/MatthiasDeFre/AR-Museum-Android/blob/master/img/paintingLocked.jpg)
 
 ## First time scanning a painting will reveal the name and date of the painting
 
-![Painting Reveal](img\paintingReveal.jpg)
+![Painting Reveal](https://github.com/MatthiasDeFre/AR-Museum-Android/blob/master/img/paintingReveal.jpg)
 
 ## Visitors can place unlocked paintings in the real world using augmented reality
 
-![Painting Gallery](img\paintingGallery.jpg)
+![Painting Gallery](https://github.com/MatthiasDeFre/AR-Museum-Android/blob/master/img/paintingGallery.jpg)
 
 
 
